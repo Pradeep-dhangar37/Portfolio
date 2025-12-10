@@ -174,7 +174,7 @@ export const Projects = () => {
     });
 
     return (
-        <section id='projects' className='min-h-screen bg-white' ref={ref}>
+        <section id='projects' className='min-h-screen bg-white scroll-mt-20' ref={ref}>
             <div className='container mx-auto px-4 py-16'>
                 <animated.div style={headerAnimation} className='text-center mb-12'>
                     <h2 className='font-bold text-2xl md:text-3xl lg:text-4xl text-gray-800 underline'>

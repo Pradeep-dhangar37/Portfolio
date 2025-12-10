@@ -22,7 +22,7 @@ export const Contact = () => {
   });
 
   return (
-    <section id='contact' className='min-h-[50vh]' ref={ref}>
+    <section id='contact' className='min-h-[50vh] scroll-mt-20' ref={ref}>
       <div className='container mx-auto px-4 py-16'>
         <animated.div className='text-center mb-12'>
           <h2 className='font-bold text-2xl md:text-3xl lg:text-4xl text-gray-800 underline'>
