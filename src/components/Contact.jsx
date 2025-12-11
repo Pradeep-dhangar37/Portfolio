@@ -1,5 +1,4 @@
-import React from 'react';
-import { useTrail, animated } from '@react-spring/web';
+import { useTrail, animated, useSpring } from '@react-spring/web';
 import { useInView } from 'react-intersection-observer';
 import { SocialIcon } from 'react-social-icons';
 

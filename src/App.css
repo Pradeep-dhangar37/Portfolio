@@ -43,3 +43,335 @@
 .read-the-docs {
   color: #888;
 } */
+
+/* Mobile Navigation Animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out;
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.6s ease-out;
+  animation-fill-mode: both;
+  opacity: 0;
+}
+
+.animate-slide-in-right.animate-active {
+  opacity: 1;
+}
+
+/* Text reveal animation for navigation items */
+@keyframes text-reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+    letter-spacing: 0.1em;
+  }
+
+  50% {
+    opacity: 0.5;
+    letter-spacing: 0.05em;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    letter-spacing: normal;
+  }
+}
+
+@keyframes bounce-in {
+  0% {
+    transform: scale(0.3) rotate(-10deg);
+    opacity: 0;
+  }
+
+  50% {
+    transform: scale(1.1) rotate(5deg);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+.animate-text-reveal {
+  animation: text-reveal 0.8s ease-out;
+  animation-fill-mode: both;
+}
+
+/* Enhanced slide-in with bounce */
+@keyframes slide-in-right-enhanced {
+  0% {
+    opacity: 0;
+    transform: translateX(50px) scale(0.8);
+  }
+
+  60% {
+    opacity: 0.8;
+    transform: translateX(-5px) scale(1.05);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+/* Apply enhanced animation when menu is open */
+.animate-slide-in-right.animate-active {
+  animation: slide-in-right-enhanced 0.7s ease-out;
+  animation-fill-mode: both;
+}
+
+/* Enh
+anced Home Component Animations */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes float-slow {
+
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-20px) rotate(180deg);
+  }
+}
+
+@keyframes float-medium {
+
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-15px) rotate(90deg);
+  }
+}
+
+@keyframes float-fast {
+
+  0%,
+  100% {
+    transform: translateY(0px) scale(1);
+  }
+
+  50% {
+    transform: translateY(-10px) scale(1.2);
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 3s ease infinite;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
+
+.animate-float-slow {
+  animation: float-slow 6s ease-in-out infinite;
+}
+
+.animate-float-medium {
+  animation: float-medium 4s ease-in-out infinite;
+}
+
+.animate-float-fast {
+  animation: float-fast 2s ease-in-out infinite;
+}
+
+/* Inter
+active Bubble Animations */
+@keyframes bubble-float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes particle-explode {
+  0% {
+    transform: scale(1) translateX(0) translateY(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(0) translateX(100px) translateY(-100px);
+    opacity: 0;
+  }
+}
+
+/* Bubble glow effect */
+.bubble-glow {
+  filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.5));
+}
+
+/*
+ Enhanced Smooth Bubble Animations */
+@keyframes bubble-float-smooth {
+
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  25% {
+    transform: translateY(-3px) rotate(1deg);
+  }
+
+  50% {
+    transform: translateY(-8px) rotate(0deg);
+  }
+
+  75% {
+    transform: translateY(-3px) rotate(-1deg);
+  }
+}
+
+/* Watercolor explosion animations */
+@keyframes watercolor-spread {
+  0% {
+    transform: scale(0) rotate(0deg);
+    opacity: 0.8;
+  }
+
+  50% {
+    transform: scale(1.2) rotate(180deg);
+    opacity: 0.6;
+  }
+
+  100% {
+    transform: scale(2.5) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes watercolor-particle {
+  0% {
+    transform: scale(0) translateX(0) translateY(0) rotate(0deg);
+    opacity: 0.8;
+  }
+
+  30% {
+    transform: scale(1.8) translateX(30px) translateY(-20px) rotate(120deg);
+    opacity: 0.6;
+  }
+
+  70% {
+    transform: scale(1.2) translateX(80px) translateY(-60px) rotate(240deg);
+    opacity: 0.3;
+  }
+
+  100% {
+    transform: scale(0.3) translateX(150px) translateY(-120px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Enhanced skill animations */
+@keyframes skill-glow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+  }
+
+  50% {
+    box-shadow: 0 0 40px rgba(139, 92, 246, 0.5);
+  }
+}
+
+/* Smooth spin animation for skill rings */
+@keyframes spin-smooth {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-smooth {
+  animation: spin-smooth 12s linear infinite;
+}
+
+/* Prevent
+ text selection during bubble drag */
+.bubble-dragging {
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+}
+
+.bubble-dragging * {
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+}
+
+/* Enhanced bubble drag cursor */
+.bubble-grab {
+  cursor: grab;
+}
+
+.bubble-grab:active {
+  cursor: grabbing;
+}
